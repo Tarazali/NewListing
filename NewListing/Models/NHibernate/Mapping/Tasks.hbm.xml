@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NewListing" namespace="NewListing">
+
+  <class name="Tasks" table="Tasks">
+
+    <id name="task_id" column="task_id">
+
+      <generator class="native"/>
+      
+    </id>
+
+    <property name="task_desc" column="task_desc"/>
+
+    <property name="state" column="state"/>
+
+    <many-to-one name="Task" column="user_id" class="Users"/>
+    
+  </class>
+  
+</hibernate-mapping>

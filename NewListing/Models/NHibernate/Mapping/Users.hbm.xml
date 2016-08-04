@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NewListing" namespace="NewListing" auto-import="true">
+
+  <class name="NewListing.Models.Users, NewListing">
+
+    <id name="user_id" access="property" column="user_id" type="Int32">
+      
+      <generator class="native"></generator>
+    
+    </id>
+
+    <property name="username" access="property" column="username" type="String"></property>
+    <property name="email" access="property" column="email" type="String"></property>
+    <property name="password" access="property" column="password" type="String"></property>
+    <set name="Task">
+      <key column="task_id"/>
+      <one-to-many class="Tasks"/>
+    </set>
+              
+  </class>
+  
+</hibernate-mapping>
