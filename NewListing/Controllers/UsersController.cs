@@ -18,7 +18,7 @@ namespace NewListing.Controllers
         {
             using (ISession session = NHibernateSession.OpenSession())
             {
-                var user = session.Query<Users>().ToList();
+                var user = session.Query<Users>().ToList(); 
                 return View();
             }
         }
@@ -74,7 +74,7 @@ namespace NewListing.Controllers
                     usertoUpdate.username = user.username;
                     usertoUpdate.email = user.email;
                     usertoUpdate.password = user.password;
-                    usertoUpdate.Task = user.Task;
+                    //usertoUpdate.Task = user.Task;
 
                     using (ITransaction transaction = session.BeginTransaction())
                     {

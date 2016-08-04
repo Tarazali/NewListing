@@ -188,9 +188,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\NHibernate\Configuration\hibernate.cfg.xml" />
-    <Content Include="Models\NHibernate\Mapping\Tasks.hbm.xml" />
-    <Content Include="Models\NHibernate\Mapping\Users.hbm.xml" />
+    <Content Include="Models\NHibernate\Configuration\hibernate.cfg.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="Models\NHibernate\Mapping\Users.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />
